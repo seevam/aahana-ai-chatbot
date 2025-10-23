@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .chat-container {
+    @apply h-screen flex flex-col bg-gradient-to-b from-primary-50 to-white;
+  }
+  
+  .message-user {
+    @apply bg-primary-500 text-white rounded-2xl rounded-br-md px-4 py-3 max-w-[80%] ml-auto shadow-md;
+  }
+  
+  .message-bot {
+    @apply bg-white text-gray-800 rounded-2xl rounded-bl-md px-4 py-3 max-w-[80%] shadow-md border border-gray-200;
+  }
+  
+  .quick-exit-btn {
+    @apply fixed top-4 right-4 bg-danger-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-danger-700 transition-all z-50 flex items-center gap-2 font-semibold;
+  }
+  
+  .language-btn {
+    @apply px-6 py-3 rounded-lg border-2 border-primary-300 hover:bg-primary-500 hover:text-white transition-all font-semibold;
+  }
+  
+  .urgency-indicator {
+    @apply absolute top-2 right-2 w-3 h-3 rounded-full;
+  }
+}
